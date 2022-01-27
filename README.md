@@ -1,2 +1,2 @@
 # fsmpy-docs
-Static documentation for fsmpy.
+Static documentation for fuzzy-set-measures. 

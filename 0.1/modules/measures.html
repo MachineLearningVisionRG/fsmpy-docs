@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Measures &#8212; fsmpy documentation</title>
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../_static/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../_static/css/all.min.css">
+    <link rel="stylesheet" href="../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/blank.css" type="text/css" />
+    <link as="font" type="font/woff2" crossorigin href="../_static/css/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link as="font" type="font/woff2" crossorigin href="../_static/css/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install" href="install.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+
+    <!-- Google Analytics -->
+
+</head>
+
+<body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+    <div class="container-fluid" id="banner"></div>
+
+
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+        <div class="container-xl">
+
+            <div id="navbar-start">
+
+
+                <a class="navbar-brand" href="../index.html">
+                    <p class="title">fsmpy</p>
+                </a>
+
+
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+                <div id="navbar-center" class="mr-auto">
+
+                    <div class="navbar-center-item">
+                        <ul id="navbar-main-elements" class="navbar-nav">
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="install.html">
+  Install
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="global_variables.html">
+  Global Variables
+ </a>
+                            </li>
+
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+                            </li>
+
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="sets.html">
+  Sets
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="datasets.html">
+  Datasets
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 current active nav-item">
+                                <a class="current reference internal nav-link" href="#">
+  Measures
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="utils.html">
+  Utilities
+ </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="navbar-end">
+
+                    <div class="navbar-end-item">
+                        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-xl">
+        <div class="row">
+
+
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+                <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+                    <i class="icon fas fa-search"></i>
+                    <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off">
+                </form>
+                <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+                    <div class="bd-toc-item active">
+
+                    </div>
+                </nav>
+            </div>
+
+
+
+
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+
+                <div class="toc-item">
+
+                    <div class="tocsection onthispage pt-5 pb-3">
+                        <i class="fas fa-list"></i> On this page
+                    </div>
+
+                    <nav id="bd-toc-nav">
+                        <ul class="visible nav section-nav flex-column">
+                            <li class="toc-h2 nav-item toc-entry">
+                                <a class="reference internal nav-link" href="#module-distances">
+   Distance Measures
+  </a>
+                            </li>
+                            <li class="toc-h2 nav-item toc-entry">
+                                <a class="reference internal nav-link" href="#module-misc">
+   Miscellaneous Measures
+  </a>
+                            </li>
+                            <li class="toc-h2 nav-item toc-entry">
+                                <a class="reference internal nav-link" href="#module-similarities">
+   Similarity Measures
+  </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+                <div class="toc-item">
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+
+                <div>
+
+                    <section id="measures">
+                        <h1>Measures<a class="headerlink" href="#measures" title="Permalink to this headline">¶</a></h1>
+                        <section id="module-distances">
+                            <span id="distance-measures"></span>
+                            <h2>Distance Measures<a class="headerlink" href="#module-distances" title="Permalink to this headline">¶</a></h2>
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="distances.atanassov">
+<span class="sig-name descname"><span class="pre">atanassov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Hamming'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/distances.py#L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#distances.atanassov" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Distance proposed by K.T. Atanassov, from the related article: “Intuitionistic fuzzy sets”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>distance_type: str, optional</strong></dt>
+                                                <dd>
+                                                    <p>Type of computed distance:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_HAMMING</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_EUCLIDEAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_HAMMING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_EUCLIDEAN</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The distance between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="distances.grzegorzewski">
+<span class="sig-name descname"><span class="pre">grzegorzewski</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Hamming'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/distances.py#L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#distances.grzegorzewski" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Distances proposed by P. Grzegorzewski from the related article: “Distances between intuitionistic fuzzy sets and/or interval-valued fuzzy sets based on the Hausdorff metric”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>distance_type: str, optional</strong></dt>
+                                                <dd>
+                                                    <p>Type of computed distance: &gt;&gt;&gt; DISTANCE_HAMMING &gt;&gt;&gt; DISTANCE_EUCLIDEAN &gt;&gt;&gt; DISTANCE_NORMALIZED_HAMMING** or &gt;&gt;&gt; DISTANCE_NORMALIZED_EUCLIDEAN**.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The distance between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="distances.szmidt_kacprzyk">
+<span class="sig-name descname"><span class="pre">szmidt_kacprzyk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Hamming'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/distances.py#L51"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#distances.szmidt_kacprzyk" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Distances proposed by E. Szmidt and A. Kacprzyk, from the related article: “Distances between intuitionistic fuzzy sets”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>distance_type: str, optional</strong></dt>
+                                                <dd>
+                                                    <p>Type of computed distance:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_HAMMING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_EUCLIDEAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_HAMMING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_EUCLIDEAN</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The distance between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="distances.vlachos_sergiadis">
+<span class="sig-name descname"><span class="pre">vlachos_sergiadis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/distances.py#L249"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#distances.vlachos_sergiadis" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Distance proposed by I.K. Vlachos, G.D. Sergiadis from the related article: “Intuitionistic fuzzy information - Applications to pattern recognition”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The distance between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="distances.wang_xin">
+<span class="sig-name descname"><span class="pre">wang_xin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/distances.py#L102"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#distances.wang_xin" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <dl class="simple">
+                                        <dt>Distances proposed by W. Wang and X. Xin, from the related article: </dt>
+                                        <dd>
+                                            <p>“Distance measure between intuitionistic fuzzy sets”</p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set. distance_type: int, optional Type of computed distance:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">WANGXIN_DISTANCE_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">WANGXIN_DISTANCE_2</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The distance between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="distances.yang_chiclana">
+<span class="sig-name descname"><span class="pre">yang_chiclana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Hamming'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/distances.py#L157"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#distances.yang_chiclana" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Distances proposed by Y. Yang and F. Chiclana, from the related article: “Consistency of 2D and 3D distances of intuitionistic fuzzy sets”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>distance_type: str, optional</strong></dt>
+                                                <dd>
+                                                    <p>Type of computed distance:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_HAMMING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_EUCLIDEAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_HAMMING</span> <span class="ow">or</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_EUCLIDEAN</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The distance between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                        </section>
+                        <section id="module-misc">
+                            <span id="miscellaneous-measures"></span>
+                            <h2>Miscellaneous Measures<a class="headerlink" href="#module-misc" title="Permalink to this headline">¶</a></h2>
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="misc.fuzzy_divergence">
+<span class="sig-name descname"><span class="pre">fuzzy_divergence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/misc.py#L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#misc.fuzzy_divergence" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Fuzzy Divergence proposed by J. Fan, W. Xie, from the related article: “Distance measure and induced fuzzy entropy”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="misc.fuzzy_index">
+<span class="sig-name descname"><span class="pre">fuzzy_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">coeff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/misc.py#L34"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#misc.fuzzy_index" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Fuzzy Index T. Chaira, A.R. Ray, from the related article: “Threshold selection using fuzzy set theory”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>coeff: int</strong></dt>
+                                                <dd>
+                                                    <p>Coefficient of the index.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                        </section>
+                        <section id="module-similarities">
+                            <span id="similarity-measures"></span>
+                            <h2>Similarity Measures<a class="headerlink" href="#module-similarities" title="Permalink to this headline">¶</a></h2>
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.chen_1">
+<span class="sig-name descname"><span class="pre">chen_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L620"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.chen_1" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by S.M. Chen, from the related article: “Measures of similarity between vague sets”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.chen_2">
+<span class="sig-name descname"><span class="pre">chen_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L746"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.chen_2" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <dl class="simple">
+                                        <dt>Similarity proposed by S.M. Chen, from the related article: </dt>
+                                        <dd>
+                                            <p>“Similarity measure between vague sets and between elements”</p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                                <dt><strong>a, b, c: int</strong></dt>
+                                                <dd>
+                                                    <p>Must satisfy the condition: a &gt;= c &gt;= 0 &gt;= b.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.chen_cheng_lan">
+<span class="sig-name descname"><span class="pre">chen_cheng_lan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L1280"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.chen_cheng_lan" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by S.M. Chen, S.H. Cheng, T.-C. Lan, from the related article: “A novel similarity measure between intuitionistic fuzzy sets based on the centroid points of transformed fuzzy numbers with applications
+                                        to pattern recognition”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.deng_jiang_fu">
+<span class="sig-name descname"><span class="pre">deng_jiang_fu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L1040"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.deng_jiang_fu" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by G. Deng, Y. Jiang, J. Fu, from the related article: “Monotonic similarity measures between intuitionistic fuzzy sets and their relationship with entropy and inclusion measure”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type</strong><span class="classifier">int, optional</span></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_3</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>p: float</strong></dt>
+                                                <dd>
+                                                    <p>must be &gt;= 1. Used in all types <em>except</em></p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_3</span> <span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_3</span> <span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_1</span> <span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_2</span> <span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_3</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>u: float</strong></dt>
+                                                <dd>
+                                                    <p>Must be positive. Used only in</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_2</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>v: float</strong></dt>
+                                                <dd>
+                                                    <p>Must be positive. Used only in</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_2</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.dengfeng_chuntian">
+<span class="sig-name descname"><span class="pre">dengfeng_chuntian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L20"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.dengfeng_chuntian" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by L. Dengfeng and C. Chuntian, from the related article: “New similarity measures of intuitionistic fuzzy sets and application to pattern recognition”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.hong_kim">
+<span class="sig-name descname"><span class="pre">hong_kim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L699"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.hong_kim" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by D.H. Hong and C.Kim, from the related article: “A note on similarity measures between vague sets and between elements”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                                <dt><strong>a, b, c: int</strong></dt>
+                                                <dd>
+                                                    <p>Must satisfy the condition: a &gt;= c &gt;= 0 &gt;= b.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.hung_yang_1">
+<span class="sig-name descname"><span class="pre">hung_yang_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'l'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L280"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.hung_yang_1" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by W.L. Hung and M.S. Yang, from the related article: “Similarity measures of intuitionistic fuzzy sets based on Hausdorff similarity”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type: str, optional</strong></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_1_SIMILARITY_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_1_SIMILARITY_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_1_SIMILARITY_3</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>weights: List of weights for each membership/non-membership value.</strong></dt>
+                                                <dd></dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.hung_yang_2">
+<span class="sig-name descname"><span class="pre">hung_yang_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'l'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L412"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.hung_yang_2" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by W.L. Hung and M.S. Yang, from the related article: “On the J-divergence of intuitionistic fuzzy sets with its applications to pattern recognition”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type</strong><span class="classifier">str, optional</span></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_2_SIMILARITY_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_2_SIMILARITY_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_2_SIMILARITY_3</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>a: case of divergence measure. Positive integer &gt;= 1.</strong></dt>
+                                                <dd></dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                                <dt>Raises:</dt>
+                                                <dd>
+                                                    <p>ValueError if a is &lt; 1.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.hung_yang_3">
+<span class="sig-name descname"><span class="pre">hung_yang_3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'w1'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L544"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.hung_yang_3" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by W.L. Hung and M.S. Yang, from the related article: “On similarity measures between intuitionistic fuzzy sets”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type</strong><span class="classifier">str, optional</span></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_7</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>The similarity between the two sets provided.</dt>
+                                                <dd></dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.hung_yang_4">
+<span class="sig-name descname"><span class="pre">hung_yang_4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'l'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L654"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.hung_yang_4" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by W.L. Hung and M.S. Yang, from the related article: “Similarity measures of intuitionistic fuzzy sets based on Lp metric”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type</strong><span class="classifier">str, optional</span></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_4_SIMILARITY_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_4_SIMILARITY_2</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_4_SIMILARITY_3</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.hwang_yang">
+<span class="sig-name descname"><span class="pre">hwang_yang</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L366"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.hwang_yang" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by C.M. Hwang and M.S. Yang, from the related article: “Modified cosine similarity measure between intuitionistic fuzzy sets”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.iancu">
+<span class="sig-name descname"><span class="pre">iancu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lamda</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L823"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.iancu" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarities proposed by I. Iancu, from the related article: “Intuitionistic fuzzy similarity measures based on Frank t-norms family”</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type</strong><span class="classifier">int, optional</span></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_1</span> <span class="n">IANCU_SIMILARITY_2</span> <span class="o">...</span><span class="p">,</span> <span class="n">IANCU_SIMILARITY_20</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>lambda: float</strong></dt>
+                                                <dd>
+                                                    <p>Frank family of t-operator parameter. Different cases of input: 0, 1, Inf and other. Used in all similarity_type cases <em>except</em></p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_1</span><span class="p">,</span> <span class="n">IANCU_SIMILARITY_2</span><span class="p">,</span>  <span class="n">IANCU_SIMILARITY_3</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_4</span><span class="p">,</span> <span class="n">IANCU_SIMILARITY_18</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.intarapaiboon">
+<span class="sig-name descname"><span class="pre">intarapaiboon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L1017"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.intarapaiboon" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by P. Intarapaiboon, from the related article: “A hierarchy-based similarity measure for intuitionistic fuzzy sets”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.julian_hung_lin">
+<span class="sig-name descname"><span class="pre">julian_hung_lin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L238"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.julian_hung_lin" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by P. Julian, K.C. Hung and S.J. Lin, from the related article: “On the Mitchell similarity measure and its application to pattern recognition”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.liang_shi">
+<span class="sig-name descname"><span class="pre">liang_shi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'e'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omegas</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">[0.5,</span> <span class="pre">0.3,</span> <span class="pre">0.2]</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.liang_shi" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by Z. Liang and P. Shi, from the related article: “Similarity measures on intuitionistic fuzzy sets””</p>
+                                    <dl class="field-list">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl>
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>similarity_type</strong><span class="classifier">str, optional</span></dt>
+                                                <dd>
+                                                    <p>Type of computed similarity:</p>
+                                                    <div class="doctest highlight-default notranslate">
+                                                        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">LIANG_SHI_SIMILARITY_1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LIANG_SHI_SIMILARITY_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LIANG_SHI_SIMILARITY_3</span>
+</pre></div>
+                                                    </div>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                                <dt><strong>omegas: Iterable</strong></dt>
+                                                <dd>
+                                                    <p>An iterable with 3 elements, with their sum equal to 1.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.liu">
+<span class="sig-name descname"><span class="pre">liu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L785"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.liu" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by H.W. Liu, from the related article: “New similarity measures between intuitionistic fuzzy sets and between elements”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                                <dt><strong>a, b, c: float</strong></dt>
+                                                <dd>
+                                                    <p>Sum of those parameters must be equal to 1.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.mitchell">
+<span class="sig-name descname"><span class="pre">mitchell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L195"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.mitchell" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by H.B. Mitchell, from the related article: “On the Dengfeng-Chuntian similarity measure and its application to pattern recognition”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.muthukumar_krishnanb">
+<span class="sig-name descname"><span class="pre">muthukumar_krishnanb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L1315"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.muthukumar_krishnanb" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by P. Muthukumar, G. S. S. Krishnan, from the related article: “A similarity measure of intuitionistic fuzzy soft sets and itsapplication in medical diagnosis”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.nguyen">
+<span class="sig-name descname"><span class="pre">nguyen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L1235"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.nguyen" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by H. Nguyen, from the related article: “A novel similarity/dissimilarity measure for intuitionistic fuzzy sets and its application in pattern recognition”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.park_kwun_lim">
+<span class="sig-name descname"><span class="pre">park_kwun_lim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L149"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.park_kwun_lim" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by A.H. Park, A.S. Park, Y.C. Kwun and K.M. Lim, from the related article: “New Similarity Measures on Intuitionistic Fuzzy Sets”.</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>p</strong><span class="classifier">int</span></dt>
+                                                <dd>
+                                                    <p>Positive integer &gt;= 1.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd></dd>
+                                                <dt>The similarity between the two sets provided.</dt>
+                                                <dd></dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.song_wang_lei_xue">
+<span class="sig-name descname"><span class="pre">song_wang_lei_xue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.IntuitionisticFuzzySet" title="sets.IntuitionisticFuzzySet"><span class="pre">sets.IntuitionisticFuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L986"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.song_wang_lei_xue" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by Y. Song, X. Wang, L. Lei, A. Xue, from the related article: “A novel similarity measure on intuitionistic fuzzy sets with its applications”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.ye">
+<span class="sig-name descname"><span class="pre">ye</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L329"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.ye" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by J. Ye, from the related article: “Cosine similarity measures for intuitionistic fuzzy sets and their applications”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>weights</strong><span class="classifier">list of floats</span></dt>
+                                                <dd>
+                                                    <p>List of weights for each membership/non-membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="similarities.zhang_fu">
+<span class="sig-name descname"><span class="pre">zhang_fu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/similarities.py#L516"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#similarities.zhang_fu" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Similarity proposed by C. Zhang and H. Fu, from the related article: “Similarity measures on three kinds of fuzzy sets”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                                <dt><strong>B</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>A fuzzy set.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>The similarity between the two sets provided.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                        </section>
+                    </section>
+
+
+                </div>
+
+
+                <!-- Previous / next buttons -->
+                <div class='prev-next-area'>
+                    <a class='left-prev' id="prev-link" href="datasets.html" title="previous page">
+                        <i class="fas fa-angle-left"></i>
+                        <div class="prev-next-info">
+                            <p class="prev-next-subtitle">previous</p>
+                            <p class="prev-next-title">Datasets</p>
+                        </div>
+                    </a>
+                    <a class='right-next' id="next-link" href="utils.html" title="next page">
+                        <div class="prev-next-info">
+                            <p class="prev-next-subtitle">next</p>
+                            <p class="prev-next-title">Utilities</p>
+                        </div>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <script src="index.be7d3bbb2ef33a8344ce.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+        <div class="container">
+
+            <div class="footer-item">
+                <p class="copyright">
+                    &copy; Copyright 2021, George Sidiropoulos.<br>
+                </p>
+            </div>
+
+            <div class="footer-item">
+                <p class="sphinx-version">
+                    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

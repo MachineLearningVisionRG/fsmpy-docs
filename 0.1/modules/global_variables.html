@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Global Variables &#8212; fsmpy documentation</title>
+
+    <link rel="canonical" href="https://machinelearningvisionrg.github.io/fsmpy-docs/stable/index.html" />
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../_static/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../_static/css/all.min.css">
+    <link rel="stylesheet" href="../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/blank.css" type="text/css" />
+    <link as="font" type="font/woff2" crossorigin href="../_static/css/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link as="font" type="font/woff2" crossorigin href="../_static/css/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install" href="install.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+</head>
+
+<body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+    <div class="container-fluid" id="banner"></div>
+
+
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+        <div class="container-xl">
+
+            <div id="navbar-start">
+
+
+                <a class="navbar-brand" href="../index.html">
+                    <p class="title">fsmpy</p>
+                </a>
+
+
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+                <div id="navbar-center" class="mr-auto">
+
+                    <div class="navbar-center-item">
+                        <ul id="navbar-main-elements" class="navbar-nav">
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="install.html">
+  Install
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 current active nav-item">
+                                <a class="current reference internal nav-link" href="#">
+  Global Variables
+ </a>
+                            </li>
+
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+                            </li>
+
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="sets.html">
+  Sets
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="datasets.html">
+  Datasets
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="measures.html">
+  Measures
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="utils.html">
+  Utilities
+ </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="navbar-end">
+
+                    <div class="navbar-end-item">
+                        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-xl">
+        <div class="row">
+
+
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+                <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+                    <i class="icon fas fa-search"></i>
+                    <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off">
+                </form>
+                <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+                    <div class="bd-toc-item active">
+
+                    </div>
+                </nav>
+            </div>
+
+
+
+
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+
+                <div class="toc-item">
+
+
+                    <nav id="bd-toc-nav">
+
+                    </nav>
+                </div>
+
+                <div class="toc-item">
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+
+                <div>
+
+                    <section id="module-fsmpy">
+                        <span id="global-variables"></span>
+                        <h1>Global Variables<a class="headerlink" href="#module-fsmpy" title="Permalink to this headline">¶</a></h1>
+                        <dl class="py data">
+                            <dt class="sig sig-object py" id="__version__">
+<span class="sig-name descname"><span class="pre">__version__</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'0.1.0'</span></em><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/__init__.py#L1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#__version__" title="Permalink to this definition">¶</a></dt>
+                            <dd>
+                                <p>Includes measure types variables, specifying the type of measure to use in specific measures. The types are used to specify a specific measure function proposed in a study. For example, Atanassov proposed 4 types of distances
+                                    in a single study, the following constants are used to specify each distance type to calculate using the <cite>atanassov</cite> measure:</p>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_HAMMING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_EUCLIDEAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_HAMMING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_EUCLIDEAN</span>
+</pre></div>
+                                </div>
+                                <p>Includes the following types:</p>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_HAMMING</span> <span class="o">=</span> <span class="s1">&#39;Hamming&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_EUCLIDEAN</span> <span class="o">=</span> <span class="s1">&#39;Euclidean&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_HAMMING</span> <span class="o">=</span> <span class="s1">&#39;normalized Hamming&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DISTANCE_NORMALIZED_EUCLIDEAN</span> <span class="o">=</span> <span class="s1">&#39;normalized Euclidean&#39;</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">WANGXIN_DISTANCE_1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">WANGXIN_DISTANCE_2</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">LIANG_SHI_SIMILARITY_1</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LIANG_SHI_SIMILARITY_2</span> <span class="o">=</span> <span class="s1">&#39;s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LIANG_SHI_SIMILARITY_3</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_1_SIMILARITY_1</span> <span class="o">=</span> <span class="s1">&#39;l&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_1_SIMILARITY_2</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_1_SIMILARITY_3</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_2_SIMILARITY_1</span> <span class="o">=</span> <span class="s1">&#39;l&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_2_SIMILARITY_2</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_2_SIMILARITY_3</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_1</span> <span class="o">=</span> <span class="s1">&#39;w1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_2</span> <span class="o">=</span> <span class="s1">&#39;w2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_3</span> <span class="o">=</span> <span class="s1">&#39;pk1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_4</span> <span class="o">=</span> <span class="s1">&#39;pk2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_5</span> <span class="o">=</span> <span class="s1">&#39;pk3&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_6</span> <span class="o">=</span> <span class="s1">&#39;new1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_3_SIMILARITY_7</span> <span class="o">=</span> <span class="s1">&#39;new2&#39;</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_4_SIMILARITY_1</span> <span class="o">=</span> <span class="s1">&#39;l&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_4_SIMILARITY_2</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HUNG_YANG_4_SIMILARITY_3</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_3</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_4</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_5</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_6</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_7</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_8</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_9</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_10</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_11</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_12</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_13</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_14</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_15</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_16</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_17</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_18</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_19</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">IANCU_SIMILARITY_20</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+                                </div>
+                                <div class="doctest highlight-default notranslate">
+                                    <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_3</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_1_4</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_3</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_2_4</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_1</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_2</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DENG_JIANG_FU_MONOTONIC_TYPE_3_3</span> <span class="o">=</span> <span class="mi">11</span>
+</pre></div>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </section>
+
+
+                </div>
+
+
+                <!-- Previous / next buttons -->
+                <div class='prev-next-area'>
+                    <a class='left-prev' id="prev-link" href="install.html" title="previous page">
+                        <i class="fas fa-angle-left"></i>
+                        <div class="prev-next-info">
+                            <p class="prev-next-subtitle">previous</p>
+                            <p class="prev-next-title">Install</p>
+                        </div>
+                    </a>
+                    <a class='right-next' id="next-link" href="sets.html" title="next page">
+                        <div class="prev-next-info">
+                            <p class="prev-next-subtitle">next</p>
+                            <p class="prev-next-title">Sets</p>
+                        </div>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <script src="index.be7d3bbb2ef33a8344ce.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+        <div class="container">
+
+            <div class="footer-item">
+                <p class="copyright">
+                    &copy; Copyright 2021, George Sidiropoulos.<br>
+                </p>
+            </div>
+
+            <div class="footer-item">
+                <p class="sphinx-version">
+                    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

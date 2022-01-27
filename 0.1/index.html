@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>fsmpy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif
+    }
+    
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif
+    }
+    
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Float four columns side by side */
+    
+    .column {
+        float: left;
+        width: 33%;
+        padding: 15px 10px;
+    }
+    /* Remove extra left and right margins, due to padding */
+    
+    .row {
+        margin: 0 -5px;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive columns */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    /* Style the counter cards */
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 6px;
+        height: 230px;
+        text-align: justify;
+        background-color: #f1f1f1;
+    }
+    
+    .w4-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: #ffffff;
+    }
+    
+    .grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 10px;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    
+    .grid-container>div {
+        background-color: rgba(236, 236, 236, 0.8);
+        text-align: justify;
+        padding: 100px;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-blue-gray w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="modules/install.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Install</a>
+            <a href="modules/examples.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Examples</a>
+            <a href="https://github.com/MachineLearningVisionRG/fsmpy" class="w3-bar-item w3-button w3-padding-large">Github</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About us</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="modules/install.html" class="w3-bar-item w3-button w3-padding-large">Install</a>
+            <a href="modules/examples.html" class="w3-bar-item w3-button w3-padding-large">Examples</a>
+            <a href="https://github.com/MachineLearningVisionRG/fsmpy" class="w3-bar-item w3-button w3-padding-large">Github</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">About us</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-blue-gray w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">Welcome to Fuzzy Set Measures Python (fsmpy) Library</h1><br>
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="location.href='modules/install.html'">Get Started</button>
+    </header>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h3>Fuzzy sets representation</h3>
+                <p>Fuzzy Sets are represented through the FuzzySet class which includes attributes for the corresponding membership and non-membership values. </p>
+                <p><button class="w3-button w3-teal w3-padding-large w3-large w3-margin-top" onclick="location.href='modules/sets.html'">Exapmles</button></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Pattern Recognition</h3>
+                <p>Load the provided medical diagnosis data used in the literature and classify the first patient's symptoms to the correspondig diagnosis with a distance measure.</p>
+                <p><button class="w3-button w3-teal w3-padding-large w3-large w3-margin-top" onclick="location.href='modules/examples.html#'">Examples</button></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Fuzzy measure usage</h3>
+                <p>Calculate the normalized Euclidean or Euclidean distance and Hamming or Normalized Hamming distance between two Fuzzy Sets A and B. </p>
+                <p><button class="w3-button w3-teal w3-padding-large w3-large w3-margin-top" onclick="location.href='modules/examples.html#fmu'">Examples</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h3>Image processing</h3>
+                <p>Load the provided grayscale images and use a distance, a similarity or a misc measure to calculate the threshold of an image in order to be segmented. </p>
+                <p><button class="w3-button w3-teal w3-padding-large w3-large w3-margin-top" onclick="location.href='modules/utils.html#module-utils.image_processing'">Exapmles</button></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Classification</h3>
+                <p>Fuzzy Sets also used for classification tasks. Text classification is a typical example of classification task that can be solved by Fuzzy Sets.</p>
+                <p><button class="w3-button w3-teal w3-padding-large w3-large w3-margin-top" onclick="location.href='modules/utils.html#module-utils.classifiers'">Examples</button></p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <p>
+            <h3>Open for Funding</h3>
+        </p>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

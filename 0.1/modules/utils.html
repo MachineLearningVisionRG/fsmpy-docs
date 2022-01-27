@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Utilities &#8212; fsmpy documentation</title>
+
+    <link rel="canonical" href="https://machinelearningvisionrg.github.io/fsmpy-docs/stable/index.html" />
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../_static/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../_static/css/all.min.css">
+    <link rel="stylesheet" href="../_static/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/blank.css" type="text/css" />
+    <link as="font" type="font/woff2" crossorigin href="../_static/css/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link as="font" type="font/woff2" crossorigin href="../_static/css/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install" href="install.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+
+</head>
+
+<body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+    <div class="container-fluid" id="banner"></div>
+
+
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+        <div class="container-xl">
+
+            <div id="navbar-start">
+
+
+                <a class="navbar-brand" href="../index.html">
+                    <p class="title">fsmpy</p>
+                </a>
+
+
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+                <div id="navbar-center" class="mr-auto">
+
+                    <div class="navbar-center-item">
+                        <ul id="navbar-main-elements" class="navbar-nav">
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="install.html">
+  Install
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="global_variables.html">
+  Global Variables
+ </a>
+                            </li>
+
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+                            </li>
+
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="sets.html">
+  Sets
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="datasets.html">
+  Datasets
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 nav-item">
+                                <a class="reference internal nav-link" href="measures.html">
+  Measures
+ </a>
+                            </li>
+
+                            <li class="toctree-l1 current active nav-item">
+                                <a class="current reference internal nav-link" href="#">
+  Utilities
+ </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="navbar-end">
+
+                    <div class="navbar-end-item">
+                        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-xl">
+        <div class="row">
+
+
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+                <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+                    <i class="icon fas fa-search"></i>
+                    <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off">
+                </form>
+                <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+                    <div class="bd-toc-item active">
+
+                    </div>
+                </nav>
+            </div>
+
+
+
+
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+
+                <div class="toc-item">
+
+                    <div class="tocsection onthispage pt-5 pb-3">
+                        <i class="fas fa-list"></i> On this page
+                    </div>
+
+                    <nav id="bd-toc-nav">
+                        <ul class="visible nav section-nav flex-column">
+                            <li class="toc-h2 nav-item toc-entry">
+                                <a class="reference internal nav-link" href="#module-utils.classifiers">
+   Classifiers
+  </a>
+                            </li>
+                            <li class="toc-h2 nav-item toc-entry">
+                                <a class="reference internal nav-link" href="#module-utils.image_processing">
+   Image Processing
+  </a>
+                            </li>
+                            <li class="toc-h2 nav-item toc-entry">
+                                <a class="reference internal nav-link" href="#module-utils">
+   Methods
+  </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+                <div class="toc-item">
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+
+                <div>
+
+                    <section id="utilities">
+                        <h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h1>
+                        <section id="module-utils.classifiers">
+                            <span id="classifiers"></span>
+                            <h2>Classifiers<a class="headerlink" href="#module-utils.classifiers" title="Permalink to this headline">¶</a></h2>
+                            <dl class="py class">
+                                <dt class="sig sig-object py" id="utils.classifiers.FuzzyTextClassifier">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FuzzyTextClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measure_caller</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">collections.abc.Callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_distance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">measure_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L58"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.FuzzyTextClassifier" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Text document classification proposed by P. Intarapaiboon from the related article: “Text classification using similarity measures on intuitionistic fuzzy sets”.</p>
+                                    <p>Train and classification object to classify text documents following the proposed method.</p>
+                                    <p>Follows Estimator API from scikit-learn Estimator object.</p>
+                                    <div class="admonition seealso">
+                                        <p class="admonition-title">See also</p>
+                                        <dl class="simple">
+                                            <dt><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.base.BaseEstimator.html#sklearn.base.BaseEstimator" title="(in scikit-learn v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.base.BaseEstimator</span></code></a></dt>
+                                            <dd></dd>
+                                        </dl>
+                                    </div>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Attributes</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>measure_caller</strong><span class="classifier">Callable</span></dt>
+                                                <dd>
+                                                    <p>Measure to use during prediction process.</p>
+                                                </dd>
+                                                <dt><strong>measure_kwargs</strong><span class="classifier">dict</span></dt>
+                                                <dd>
+                                                    <p>Passed to the measure_caller.</p>
+                                                </dd>
+                                                <dt><strong>is_distance</strong><span class="classifier">bool</span></dt>
+                                                <dd>
+                                                    <p>If measure_caller is a distance or not.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                    <p class="rubric">Methods</p>
+                                    <table class="longtable table autosummary">
+                                        <colgroup>
+                                            <col style="width: 10%" />
+                                            <col style="width: 90%" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="row-odd">
+                                                <td>
+                                                    <p><a class="reference internal" href="#utils.classifiers.FuzzyTextClassifier.fit" title="utils.classifiers.FuzzyTextClassifier.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(X, y)</p>
+                                                </td>
+                                                <td>
+                                                    <p>&quot;Trains&quot; on the X data prpovided.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td>
+                                                    <p><a class="reference internal" href="#utils.classifiers.FuzzyTextClassifier.predict" title="utils.classifiers.FuzzyTextClassifier.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(X)</p>
+                                                </td>
+                                                <td>
+                                                    <p>Predict class labels for samples X.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="row-odd">
+                                                <td>
+                                                    <p><a class="reference internal" href="#utils.classifiers.FuzzyTextClassifier.predict_proba" title="utils.classifiers.FuzzyTextClassifier.predict_proba"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict_proba</span></code></a>(X)</p>
+                                                </td>
+                                                <td>
+                                                    <p>Measures of each sample.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td>
+                                                    <p><a class="reference internal" href="#utils.classifiers.FuzzyTextClassifier.get_params" title="utils.classifiers.FuzzyTextClassifier.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</p>
+                                                </td>
+                                                <td>
+                                                    <p>Get parameters for this estimator.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="row-odd">
+                                                <td>
+                                                    <p><a class="reference internal" href="#utils.classifiers.FuzzyTextClassifier.set_params" title="utils.classifiers.FuzzyTextClassifier.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**parameters)</p>
+                                                </td>
+                                                <td>
+                                                    <p>Set the parameters of this estimator.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="utils.classifiers.FuzzyTextClassifier.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><span class="pre">object</span></a></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L113"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.FuzzyTextClassifier.fit" title="Permalink to this definition">¶</a></dt>
+                                        <dd>
+                                            <p>“Trains” on the X data prpovided.</p>
+                                            <p>Calculates the membership and non-membership values of each word for each unity class in y.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <dl class="simple">
+                                                        <dt><strong>X</strong><span class="classifier">Iterable[FuzzySet]</span></dt>
+                                                        <dd>
+                                                            <p>Data to train upon.</p>
+                                                        </dd>
+                                                        <dt><strong>y</strong><span class="classifier">Iterabale</span></dt>
+                                                        <dd>
+                                                            <p>Target vector relative to X.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                                <dt class="field-even">Returns</dt>
+                                                <dd class="field-even">
+                                                    <dl class="simple">
+                                                        <dt>self: Object</dt>
+                                                        <dd>
+                                                            <p>An instance of the estimator.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                            </dl>
+                                            <div class="admonition seealso">
+                                                <p class="admonition-title">See also</p>
+                                                <dl class="simple">
+                                                    <dt><a class="reference internal" href="#utils.calculate_documents_membership" title="utils.calculate_documents_membership"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils.calculate_documents_membership</span></code></a></dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="utils.classifiers.FuzzyTextClassifier.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L219"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.FuzzyTextClassifier.get_params" title="Permalink to this definition">¶</a></dt>
+                                        <dd>
+                                            <p>Get parameters for this estimator.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <dl class="simple">
+                                                        <dt><strong>deep</strong><span class="classifier">bool, default=True</span></dt>
+                                                        <dd>
+                                                            <p>If True, will return the parameters for this estimator and contained subobjects that are estimators.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                                <dt class="field-even">Returns</dt>
+                                                <dd class="field-even">
+                                                    <dl class="simple">
+                                                        <dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt>
+                                                        <dd>
+                                                            <p>Parameter names mapped to their values.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="utils.classifiers.FuzzyTextClassifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.int64</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L160"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.FuzzyTextClassifier.predict" title="Permalink to this definition">¶</a></dt>
+                                        <dd>
+                                            <p>Predict class labels for samples X.</p>
+                                            <p>Calculates the membership and non-membership values of each word for each unity class in y.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <dl class="simple">
+                                                        <dt><strong>X</strong><span class="classifier">Iterable[FuzzySet]</span></dt>
+                                                        <dd>
+                                                            <p>Samples.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                                <dt class="field-even">Returns</dt>
+                                                <dd class="field-even">
+                                                    <dl class="simple">
+                                                        <dt>list[np.intp]</dt>
+                                                        <dd>
+                                                            <p>Predicted class label per sample.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="utils.classifiers.FuzzyTextClassifier.predict_proba">
+<span class="sig-name descname"><span class="pre">predict_proba</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L191"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.FuzzyTextClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
+                                        <dd>
+                                            <p>Measures of each sample.</p>
+                                            <p>The returned values are the results returned when the measure_caller is called for all classes for each label.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <dl class="simple">
+                                                        <dt><strong>X</strong><span class="classifier">Iterable[FuzzySet]</span></dt>
+                                                        <dd>
+                                                            <p>Samples.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                                <dt class="field-even">Returns</dt>
+                                                <dd class="field-even">
+                                                    <dl class="simple">
+                                                        <dt>list[list[float]]</dt>
+                                                        <dd>
+                                                            <p>Returns the measures of the sample for each class, where classes are in <a href="#id1"><span class="problematic" id="id2">self.classes_</span></a></p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="utils.classifiers.FuzzyTextClassifier.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L225"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.FuzzyTextClassifier.set_params" title="Permalink to this definition">¶</a></dt>
+                                        <dd>
+                                            <p>Set the parameters of this estimator.</p>
+                                            <p>The method works on simple estimators as well as on nested objects (such as pipelines). The latter have parameters of the form
+                                                <code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each component of a nested object.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <dl class="simple">
+                                                        <dt><strong>**params</strong><span class="classifier">dict</span></dt>
+                                                        <dd>
+                                                            <p>Estimator parameters.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                                <dt class="field-even">Returns</dt>
+                                                <dd class="field-even">
+                                                    <dl class="simple">
+                                                        <dt><strong>self</strong><span class="classifier">object</span></dt>
+                                                        <dd>
+                                                            <p>Estimator instance.</p>
+                                                        </dd>
+                                                    </dl>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="utils.classifiers.classify">
+<span class="sig-name descname"><span class="pre">classify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_patterns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_caller</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">collections.abc.Callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.int64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/classifiers.py#L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.classifiers.classify" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Simple classification method to classify a sample pattern given class patterns, using the measure provided.</p>
+                                    <p>For each class pattern c, calculates the measure from measure_caller between c and sample_pattern. The class is chosen by the min/max measure between the sample and class patterns, depending on is_distance. If return_confidence
+                                        is true, returns the degree of confidence for the chosen class.</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>class_patterns</strong><span class="classifier">list[FuzzySet]</span></dt>
+                                                <dd>
+                                                    <p>Class patterns to which the sample_pattern is classified.</p>
+                                                </dd>
+                                                <dt><strong>sample_pattern</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>The sample to be classified.</p>
+                                                </dd>
+                                                <dt><strong>measure_caller</strong><span class="classifier">Callable</span></dt>
+                                                <dd>
+                                                    <p>The measure function to use when measuring the sets of the ideally thresholded image and the current image set.</p>
+                                                </dd>
+                                                <dt><strong>is_distance</strong><span class="classifier">bool</span></dt>
+                                                <dd>
+                                                    <p>If the measure provided is a distance or a similarity. Used to pick the best measure calculated.</p>
+                                                </dd>
+                                                <dt><strong>return_confidence</strong><span class="classifier">bool</span></dt>
+                                                <dd>
+                                                    <p>Whether the confidence degree is returned. Can only be calculated if is_distance is True.</p>
+                                                </dd>
+                                                <dt><strong>**kwargs</strong><span class="classifier">additional arguments</span></dt>
+                                                <dd>
+                                                    <p>Passed to the measure_caller.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.intp</dt>
+                                                <dd>
+                                                    <p>The class of sample_pattern.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                    <div class="admonition seealso">
+                                        <p class="admonition-title">See also</p>
+                                        <dl class="simple">
+                                            <dt><a class="reference internal" href="#utils.confidence_degree" title="utils.confidence_degree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils.confidence_degree</span></code></a></dt>
+                                            <dd></dd>
+                                        </dl>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                        </section>
+                        <section id="module-utils.image_processing">
+                            <span id="image-processing"></span>
+                            <h2>Image Processing<a class="headerlink" href="#module-utils.image_processing" title="Permalink to this headline">¶</a></h2>
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="utils.image_processing.threshold">
+<span class="sig-name descname"><span class="pre">threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><span class="pre">numpy.ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_caller</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_distance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/image_processing.py#L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.image_processing.threshold" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Thresholds the input image following the proposed method by T. Chaira and A.K. Ray, from the related article: “Threshold selection using fuzzy set theory”.</p>
+                                    <p>For each thresold value t [0, 255], the set S1 of the ideally thresholded image is calculated and the set S2 of thresholded image with value t. The selected threshold value is the one with the min/max (Depending on
+                                        is_distance) measure between the sets for each threshold value t.</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>image</strong><span class="classifier">np.ndarray</span></dt>
+                                                <dd>
+                                                    <p>Single channel input image.</p>
+                                                </dd>
+                                                <dt><strong>measure_caller</strong><span class="classifier">Callable</span></dt>
+                                                <dd>
+                                                    <p>The measure function to use when measuring the sets of the ideally thresholded image and the current image set.</p>
+                                                </dd>
+                                                <dt><strong>is_distance</strong><span class="classifier">bool</span></dt>
+                                                <dd>
+                                                    <p>If the measure provided is a distance or a similarity. Used to pick the best measure calculated.</p>
+                                                </dd>
+                                                <dt><strong>l</strong><span class="classifier">float</span></dt>
+                                                <dd>
+                                                    <p>Used to calculate the membership values of the thresholded image with value t.</p>
+                                                </dd>
+                                                <dt><strong>**kwargs</strong><span class="classifier">additional arguments</span></dt>
+                                                <dd>
+                                                    <p>Passed to the measure_caller.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt><strong>thresholded_image</strong><span class="classifier">np.ndarray</span></dt>
+                                                <dd>
+                                                    <p>Thresholded image.</p>
+                                                </dd>
+                                                <dt><strong>threshold_value</strong><span class="classifier">np.float64</span></dt>
+                                                <dd>
+                                                    <p>Threshold value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                        </section>
+                        <section id="module-utils">
+                            <span id="methods"></span>
+                            <h2>Methods<a class="headerlink" href="#module-utils" title="Permalink to this headline">¶</a></h2>
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="utils.calculate_documents_membership">
+<span class="sig-name descname"><span class="pre">calculate_documents_membership</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">membership_weight</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_membership_weight</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/__init__.py#L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.calculate_documents_membership" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Calculates the Fuzzy Set of each class from token counts. Proposed by P. Intarapaiboon from the related article: “Text classification using similarity measures on intuitionistic fuzzy sets”.</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>data</strong><span class="classifier">Iterable</span></dt>
+                                                <dd>
+                                                    <p>Token counts of a document dataset.</p>
+                                                </dd>
+                                                <dt><strong>membership_weight</strong><span class="classifier">float</span></dt>
+                                                <dd>
+                                                    <p>Weight used to calculate the membership values of each token’s membership value.</p>
+                                                </dd>
+                                                <dt><strong>non_membership_weight</strong><span class="classifier">float</span></dt>
+                                                <dd>
+                                                    <p>Weight used to calculate the non-membership values of each token’s membership value.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>list[FuzzySet]</dt>
+                                                <dd>
+                                                    <p>List of FuzzySets for each class.</p>
+                                                </dd>
+                                                <dt><strong>np.ndarray</strong><span class="classifier">means</span></dt>
+                                                <dd>
+                                                    <p>Mean values for each token in data.</p>
+                                                </dd>
+                                                <dt><strong>np.ndarray</strong><span class="classifier">stds</span></dt>
+                                                <dd>
+                                                    <p>Standard deviation values for each token in data.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                    <div class="admonition seealso">
+                                        <p class="admonition-title">See also</p>
+                                        <dl class="simple">
+                                            <dt><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer" title="(in scikit-learn v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.feature_extraction.text.CountVectorizer</span></code></a></dt>
+                                            <dd></dd>
+                                        </dl>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="utils.check_similarity_conditions">
+<span class="sig-name descname"><span class="pre">check_similarity_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measure_caller</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">collections.abc.Callable</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">measure_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/__init__.py#L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.check_similarity_conditions" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Checks if measures satisfies the required conditions.</p>
+                                    <p>Checks whether the measure provided satisfies the following conditions:</p>
+                                    <div class="math notranslate nohighlight">
+                                        \[S(A, B) &gt;= 0\ and\ S(A, B) &lt;= 1\]</div>
+                                    <div class="math notranslate nohighlight">
+                                        \[S(A, B) == S(B, A)\]</div>
+                                    <div class="math notranslate nohighlight">
+                                        \[S(A, A) == 1\]</div>
+                                    <p>The algorithm conducts two tests. The first one creates a list from <cite>np.arange(start=0.0, stop=1.01, step=0.01)</cite> and 10.000 creates two sets A and B with a random size (1-1000) of (non)membership values with
+                                        random values picked from the range above, checking if the conditions apply.</p>
+                                    <dl class="simple">
+                                        <dt>The second test creates 4 sets with random sizes (1-1000), with random values using <cite>np.random.rand(random_size)</cite></dt>
+                                        <dd>
+                                            <p>and checks for the conditions again.</p>
+                                        </dd>
+                                    </dl>
+                                    <p>The first two sets only contain membership and non-membership values, while the 2 last sets contain membership values and hesitation degrees. Checks if the condition applies when the measure is applied on all combination
+                                        of the 4 sets.</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>measure_caller</strong><span class="classifier">Callable</span></dt>
+                                                <dd>
+                                                    <p>The measure to be tested.</p>
+                                                </dd>
+                                                <dt><strong>**measure_kwargs</strong><span class="classifier">measure arguments</span></dt>
+                                                <dd>
+                                                    <p>Passed to the measure_caller.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>Compactness of the image.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="utils.compactness">
+<span class="sig-name descname"><span class="pre">compactness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="sets.html#sets.FuzzySet" title="sets.FuzzySet"><span class="pre">sets.FuzzySet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/__init__.py#L78"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.compactness" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Image geometry proposd by S.K. Pal, A. Rosenfeld, from the related article: “Image enhancement and thresholding by optimization of fuzzy compactness”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>A</strong><span class="classifier">FuzzySet</span></dt>
+                                                <dd>
+                                                    <p>Fuzzy set of an image, containing a 2-d np.ndarray as an image.</p>
+                                                </dd>
+                                                <dt><strong>shape</strong><span class="classifier">Tuple[float, float]</span></dt>
+                                                <dd>
+                                                    <p>Shape of the original image.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>Compactness of the image.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-odd">Raises</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt>ValueError</dt>
+                                                <dd>
+                                                    <p>In case the shape propvided is not a tuple of 2 values.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                            <dl class="py function">
+                                <dt class="sig sig-object py" id="utils.confidence_degree">
+<span class="sig-name descname"><span class="pre">confidence_degree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_class_distance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_classes_distance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.float64</span></span></span><a class="reference external" href="https://github.com/MachineLearningVisionRG/fsmpy/blob/main/fsmpy/utils/__init__.py#L58"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utils.confidence_degree" title="Permalink to this definition">¶</a></dt>
+                                <dd>
+                                    <p>Degree of Confidence proposd by A.G. Hatzimichailidis, G.A. Papakostas, V.G. Kaburlasos from the related article: “A Novel Distance Measure of Intuitionistic Fuzzy Sets and Its Application to Pattern Recognition Problems”</p>
+                                    <dl class="field-list simple">
+                                        <dt class="field-odd">Parameters</dt>
+                                        <dd class="field-odd">
+                                            <dl class="simple">
+                                                <dt><strong>predicted_class_distance</strong><span class="classifier">float</span></dt>
+                                                <dd>
+                                                    <p>Distance calculated between the sample and the predicted class.</p>
+                                                </dd>
+                                                <dt><strong>other_classes_distance: Iterable[float]</strong></dt>
+                                                <dd>
+                                                    <p>An Iterable consisted of the distances calculated between the sample and every other class.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                        <dt class="field-even">Returns</dt>
+                                        <dd class="field-even">
+                                            <dl class="simple">
+                                                <dt>numpy.float64</dt>
+                                                <dd>
+                                                    <p>Degree of Confidence.</p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                            </dl>
+
+                        </section>
+                    </section>
+
+
+                </div>
+
+
+                <!-- Previous / next buttons -->
+                <div class='prev-next-area'>
+                    <a class='left-prev' id="prev-link" href="measures.html" title="previous page">
+                        <i class="fas fa-angle-left"></i>
+                        <div class="prev-next-info">
+                            <p class="prev-next-subtitle">previous</p>
+                            <p class="prev-next-title">Measures</p>
+                        </div>
+                    </a>
+                </div>
+
+            </main>
+
+
+        </div>
+    </div>
+
+    <script src="index.be7d3bbb2ef33a8344ce.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+        <div class="container">
+
+            <div class="footer-item">
+                <p class="copyright">
+                    &copy; Copyright 2021, George Sidiropoulos.<br>
+                </p>
+            </div>
+
+            <div class="footer-item">
+                <p class="sphinx-version">
+                    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
